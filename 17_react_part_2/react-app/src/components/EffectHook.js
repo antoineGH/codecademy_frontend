@@ -26,10 +26,12 @@ export default function EffectHook() {
 	return (
 		<>
 			<div id='divClick'>
-				<h1>Document Clicks: {clickCount}</h1>
+				<h1>Pink Div Clicks: {clickCount}</h1>
+				<button onClick={() => setClickCount(0)}>Reset</button>
 			</div>
 			<div id='divKeyDown'>
 				<h1>Document KeyDowns: {keyCount}</h1>
+				<button onClick={() => setKeyCount(0)}>Reset</button>
 			</div>
 		</>
 	)
