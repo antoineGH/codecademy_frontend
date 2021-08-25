@@ -3,6 +3,7 @@ import EffectHook from './components/EffectHook'
 import Timer from './components/Timer'
 import Forecast from './components/Forecast'
 import SocialNetwork from './components/SocialNetwork'
+import PageTitleFunction from './components/PageTitleFunction'
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
 			<Timer />
 			<Forecast />
 			<SocialNetwork />
+			<PageTitleFunction />
 		</div>
 	)
 }
