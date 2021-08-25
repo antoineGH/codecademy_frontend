@@ -1,21 +1,36 @@
 import React, { useState, useEffect } from 'react'
+import './EffectHook.css'
 
 export default function EffectHook() {
 	const [clickCount, setClickCount] = useState(0)
+	const [keyCount, setKeyCount] = useState(0)
 
 	useEffect(() => {
-		document.addEventListener('keydown', increment)
-
-		return () => {
-			document.removeEventListener('keydown', increment)
-		}
+		document.getElementById('divClick').addEventListener('mousedown', increment)
+		return () => document.getElementById('divClick').removeEventListener('mousedown', increment)
 	})
 
-	const increment = () => setClickCount((clickCount) => clickCount + 1)
+	useEffect(() => {
+		document.addEventListener('keydown', incrementKey)
+		return () => document.removeEventListener('keydown', incrementKey)
+	})
+
+	const increment = () => {
+		setClickCount((clickCount) => clickCount + 1)
+	}
+
+	const incrementKey = () => {
+		setKeyCount((keyCount) => keyCount + 1)
+	}
 
 	return (
-		<div>
-			<h1>Document Clicks: {clickCount}</h1>
-		</div>
+		<>
+			<div id='divClick'>
+				<h1>Document Clicks: {clickCount}</h1>
+			</div>
+			<div id='divKeyDown'>
+				<h1>Document KeyDowns: {keyCount}</h1>
+			</div>
+		</>
 	)
 }
