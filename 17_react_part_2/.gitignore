@@ -20,6 +20,10 @@
 /jest/.pnp
 /jest.pnp.js
 
+/react-jest/node_modules
+/react-jest/.pnp
+/react-jest.pnp.js
+
 # testing
 /coverage
 
