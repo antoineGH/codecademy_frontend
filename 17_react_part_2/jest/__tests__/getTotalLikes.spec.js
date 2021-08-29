@@ -27,6 +27,10 @@ const getTotalLikes = (user) => {
 	return total_likes
 }
 
+const checkUsername = (user) => {
+	return user.username
+}
+
 describe('checkArticleExist', () => {
 	test('if user has at least one blog', () => {
 		expect(checkArticleExist(user)).toBe(true)
@@ -36,5 +40,11 @@ describe('checkArticleExist', () => {
 describe('getTotalLikes', () => {
 	test('should return the total likes of a user', () => {
 		expect(getTotalLikes(user)).toBe(230)
+	})
+})
+
+describe('checkUsername', () => {
+	test('should match the username user1', () => {
+		expect(checkUsername(user)).toEqual('user1')
 	})
 })
