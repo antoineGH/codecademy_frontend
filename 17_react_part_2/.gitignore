@@ -16,6 +16,10 @@
 /passing-thoughts/.pnp
 /passing-thoughts.pnp.js
 
+/jest/node_modules
+/jest/.pnp
+/jest.pnp.js
+
 # testing
 /coverage
 
